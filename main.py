@@ -1,9 +1,7 @@
 from entities.graph import Graph 
 from entities.vertex import Vertex
-
 from logic.methods import dfs
 from logic.methods import bfs
-
 from utils.show import showVertexList
 
 import sys
@@ -45,11 +43,11 @@ while(1):
     elif opcao == '3':
         visited = set() # lista nao ordenada
         showVisited = [] # lista ordenada
-        dfs(showVisited, visited, g, g.vertexList[0], 0)
+        dfs(showVisited, visited, g, g.vertexList[0])
     elif opcao == '4':
         visited = []
         queue = []
-        bfs(visited, queue, g, g.vertexList[0])
+        bfs(visited, queue, g.vertexList[0])
     else:
         print("Fim do programa")
         sys.exit()
