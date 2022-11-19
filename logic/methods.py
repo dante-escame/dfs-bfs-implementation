@@ -23,23 +23,20 @@ def bfs(vertex):
     visited.append(vertex)
     queue.append(vertex)
 
-    print(showVertexList(visited, "Visitados: "))
-    print(showVertexList(queue, "Fila: "))
+    i = 0
 
     # enquanto a fila nao estiver vazia
     while queue:
         # tira o vertice mais velho
         newVertex = queue.pop(0)
-        print(showVertexList(queue, "Fila: "))
-        
+        print(showVertexList(queue, "Fila: "), " | ", newVertex.alias, "foi removido")
+
         # para todos os vizinhos do vertice atual que ainda nao foram visitados
         for neighbour in newVertex.edgeList:
             if neighbour not in visited:
                 visited.append(neighbour)
-                print(showVertexList(visited, "Visitados: "))
+                print(showVertexList(visited, "Visitados: "), " | ", neighbour.alias, "foi adicionado")
                 queue.append(neighbour)
-                print(showVertexList(queue, "Fila: "))
+                print(showVertexList(queue, "Fila: "), " | ", neighbour.alias, "foi adicionado")
 
-    print(showVertexList(visited, "Visitados: "))
-    print(showVertexList(queue, "Fila: "))
     print("\n")

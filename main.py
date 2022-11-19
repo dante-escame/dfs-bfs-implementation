@@ -34,17 +34,23 @@ while(1):
     print("0 - Mostra o Grafo\n1 - Insere um vértice novo no Grafo\n2 - Insere uma aresta nova no Grafo\n3 - Executa DFS\n4 - Executa BFS.")
     opcao = input("Digite a opção: ")
     if opcao == '0':
+        print("\n---")
         show_graph(g)
+        print("\n---")
     elif opcao == '1':
         insert_vertex(g)
     elif opcao == '2':
         add_edge_to_vertex(g)
     elif opcao == '3':
+        print("\n---")
         visited = set() # lista nao ordenada
         viewVisited = [] # lista ordenada para visualizacao
         dfs(viewVisited, visited, g, g.vertexList[0])
+        print("\n---")
     elif opcao == '4':
+        print("\n---")
         bfs(g.vertexList[0])
+        print("\n---")
     else:
         print("Fim do programa")
         sys.exit()
