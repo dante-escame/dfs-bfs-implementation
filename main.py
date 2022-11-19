@@ -41,12 +41,10 @@ while(1):
         add_edge_to_vertex(g)
     elif opcao == '3':
         visited = set() # lista nao ordenada
-        showVisited = [] # lista ordenada
-        dfs(showVisited, visited, g, g.vertexList[0])
+        viewVisited = [] # lista ordenada para visualizacao
+        dfs(viewVisited, visited, g, g.vertexList[0])
     elif opcao == '4':
-        visited = []
-        queue = []
-        bfs(visited, queue, g.vertexList[0])
+        bfs(g.vertexList[0])
     else:
         print("Fim do programa")
         sys.exit()
