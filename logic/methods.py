@@ -6,11 +6,11 @@ def dfs(showVisited, visited, graph, vertex):
         showVisited.append(vertex)
 
         ### lista ordenada para visualizacao ###
-        showVertexList(showVisited)
+        print(showVertexList(showVisited, "Visitados: "))
         ######################################
 
         for neighbour in vertex.edgeList:
-            dfs(showVisited, visited, graph, neighbour, i)
+            dfs(showVisited, visited, graph, neighbour)
 
 def bfs(visited, queue, vertex):
     visited.append(vertex)
@@ -20,8 +20,8 @@ def bfs(visited, queue, vertex):
         newVertex = queue.pop(0)
         
         for neighbour in newVertex.edgeList:
-            showVertexList(visited, "Visitados: ")
-            showVertexList(queue, "Fila: ")
+            print(showVertexList(visited, "Visitados:"))
+            print(showVertexList(queue, "Fila:"))
             if neighbour not in visited:
                 visited.append(neighbour)
                 queue.append(neighbour)

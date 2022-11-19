@@ -27,8 +27,7 @@ def add_edge_to_vertex(graph):
 
 def show_graph(graph):
     for vertex in graph.vertexList:
-        print('Vértice', vertex.alias)
-        showVertexList(vertex.edgeList)
+        print('Vértice', vertex.alias, ':', showVertexList(vertex.edgeList))
 
 reset_graph(g)
 while(1):
