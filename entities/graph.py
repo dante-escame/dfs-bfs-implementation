@@ -15,9 +15,3 @@ class Graph:
 
     def add_vertex(self, vertex = None):
         self.vertexList.append(vertex)
-
-    def print_details(self):
-        print(self.alias)
-
-    def set_alias(self, alias):
-        self.alias = alias
